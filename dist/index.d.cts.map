@@ -1,1 +1,1 @@
-{"version":3,"file":"index.d.cts","names":[],"sources":["../src/.version.ts","../src/defaults.ts"],"mappings":"A,cAAa;;;;cCAA;cACA;cACA"}
+{"version":3,"file":"index.d.cts","names":[],"sources":["../src/.version.ts","../src/buttify.ts","../src/defaults.ts","../src/util.ts"],"mappings":"A,cAAa;iBCiJG,QACZ,iBACA,eACA,eACA,cAAa,eACb;;;;cCtJS;cACA;cACA;;;;iBCOG,cAAc"}
