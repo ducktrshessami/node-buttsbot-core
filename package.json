@@ -17,7 +17,9 @@
     "require": "./dist/index.cjs",
     "import": "./dist/index.mjs"
   },
-  "dependencies": {},
+  "dependencies": {
+    "fast-syllablize": "ducktrshessami/fast-syllablize#v2.1.5"
+  },
   "devDependencies": {
     "tsdown": "0.22.14",
     "typescript": "^7.0.2"

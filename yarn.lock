@@ -344,6 +344,10 @@ empathic@^2.0.1:
   resolved "https://registry.yarnpkg.com/empathic/-/empathic-2.1.0.tgz#01c69da7b93f603d9a7e1c1d5f86ad8354273a17"
   integrity sha512-AnfC1ATldl49/cvZdLPDjBfrRNwbDO05aibiOtzQu3qtlbJtomNLhF30HEtn/7iBz50dlMECqATo3fG0LrdEgw==
 
+fast-syllablize@ducktrshessami/fast-syllablize#v2.1.5:
+  version "2.1.5"
+  resolved "https://codeload.github.com/ducktrshessami/fast-syllablize/tar.gz/6f9b7a27fea0940539590e8684da324efc3015bf"
+
 fdir@^6.5.0:
   version "6.5.0"
   resolved "https://registry.yarnpkg.com/fdir/-/fdir-6.5.0.tgz#ed2ab967a331ade62f18d077dae192684d50d350"
