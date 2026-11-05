@@ -12,7 +12,7 @@ var __exportAll = (all, no_symbols) => {
 };
 let fast_syllablize = require("fast-syllablize");
 // src/.version.ts
-const version = "0.1.0";
+const version = "1.0.0";
 // src/defaults.ts
 var defaults_exports = /* @__PURE__ */ __exportAll({
 	frequency: () => 30,

@@ -1,4 +1,4 @@
-declare const version = "0.1.0";
+declare const version = "1.0.0";
 declare function buttify(content: string, word?: string, rate?: number, ignoreWords?: Array<string>, attemptLimit?: number | null): string | null;
 declare namespace defaults_d_exports {
   export { frequency, rate, word };

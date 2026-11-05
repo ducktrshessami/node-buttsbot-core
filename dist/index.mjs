@@ -1,7 +1,7 @@
 import { t as __exportAll } from "./rolldown-runtime-D8jQpDG7.mjs";
 import { syllablize } from "fast-syllablize";
 // src/.version.ts
-const version = "0.1.0";
+const version = "1.0.0";
 // src/defaults.ts
 var defaults_exports = /* @__PURE__ */ __exportAll({
 	frequency: () => 30,
