@@ -1,1 +1,1 @@
-{"version":3,"file":"index.cjs","names":[],"sources":["../src/.version.ts"],"sourcesContent":["export const version = \"0.1.0\";\n"],"mappings":";;AAAA,MAAa,UAAU"}
+{"version":3,"file":"index.cjs","names":[],"sources":["../src/.version.ts","../src/defaults.ts"],"sourcesContent":["export const version = \"0.1.0\";\n","export const word = \"butt\";\nexport const frequency = 30;\nexport const rate = 10;\n"],"mappings":";;;;;;;;;;;;;AAAA,MAAa,UAAU;;;;;;;ACAvB,MAAa,OAAO"}
