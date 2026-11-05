@@ -1,2 +1,2 @@
-# ts-lib-template
-Typescript library template
+# node-buttsbot-core
+Base buttification

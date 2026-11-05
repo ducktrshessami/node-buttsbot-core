@@ -1,11 +1,11 @@
 {
-  "name": "ts-lib-template",
+  "name": "node-buttsbot-core",
   "version": "0.1.0",
-  "description": "Typescript library template",
+  "description": "Base buttification",
   "type": "module",
   "main": "dist/index.mjs",
   "types": "dist/index.d.mts",
-  "repository": "git@github.com:ducktrshessami/ts-lib-template.git",
+  "repository": "git@github.com:ducktrshessami/node-buttsbot-core.git",
   "author": "ducktrshessami",
   "license": "MIT",
   "scripts": {
