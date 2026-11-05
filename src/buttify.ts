@@ -1,12 +1,16 @@
 import { syllablize } from "fast-syllablize";
 import * as Defaults from "./defaults.js";
 
-const ExpectedProbability = 0.95;
+const ExpectedCertainty = 0.95;
 const NonWordPattern = /(https?:\/\/(?:www\.)?[-A-Z0-9@:%._\+~#=]{1,256}(?:\.[A-Z0-9()]{1,6})?\b(?:[-A-Z0-9()@:%_\+.~#?&\/=]*)|<?(?:a?:?\w{2,32}:|#|@[!&]?)\d{17,19}>?|[^A-Z]+)/ig;
 const WordPattern = /^[A-Z]+$/i;
 const CapsPattern = /^[A-Z]$/;
 const AllCapsPattern = /^[A-Z]{2,}$/;
 const PluralPattern = /[SZ]$/i;
+
+function chance(n: number): boolean {
+    return Math.random() < (1 / n);
+}
 
 class ContentItem<Word extends boolean = boolean> {
     private readonly word: Word;
@@ -133,17 +137,13 @@ class ButtifiedContent {
     }
 }
 
-function chance(n: number): boolean {
-    return Math.random() < (1 / n);
-}
-
-function attempts(
+function calculateMaxAttempts(
     rate: number,
     syllables: number,
     attemptLimit: number | null
 ): number {
-    const estimatedCertainty = Math.ceil(Math.log(1 - ExpectedProbability) / (syllables * Math.log((rate - 1) / rate)));
-    return attemptLimit ? Math.min(attemptLimit, estimatedCertainty) : estimatedCertainty;
+    const certainAttempts = Math.ceil(Math.log(1 - ExpectedCertainty) / (syllables * Math.log((rate - 1) / rate)));
+    return attemptLimit ? Math.min(attemptLimit, certainAttempts) : certainAttempts;
 }
 
 export function buttify(
@@ -162,7 +162,7 @@ export function buttify(
     if (buttifiedContent.syllables < 2) {
         return null;
     }
-    const maxAttempts = rate > 1 ? attempts(rate, buttifiedContent.syllables, attemptLimit) : 1;
+    const maxAttempts = rate > 1 ? calculateMaxAttempts(rate, buttifiedContent.syllables, attemptLimit) : 1;
     for (let i = 1; i < maxAttempts && !buttifiedContent.valid; i++) {
         buttifiedContent.buttify();
     }
