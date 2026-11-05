@@ -1,5 +1,6 @@
 import { syllablize } from "fast-syllablize";
 import * as Defaults from "./defaults.js";
+import { chance } from "./util.js";
 
 const ExpectedCertainty = 0.95;
 const NonWordPattern = /(https?:\/\/(?:www\.)?[-A-Z0-9@:%._\+~#=]{1,256}(?:\.[A-Z0-9()]{1,6})?\b(?:[-A-Z0-9()@:%_\+.~#?&\/=]*)|<?(?:a?:?\w{2,32}:|#|@[!&]?)\d{17,19}>?|[^A-Z]+)/ig;
@@ -7,10 +8,6 @@ const WordPattern = /^[A-Z]+$/i;
 const CapsPattern = /^[A-Z]$/;
 const AllCapsPattern = /^[A-Z]{2,}$/;
 const PluralPattern = /[SZ]$/i;
-
-function chance(n: number): boolean {
-    return Math.random() < (1 / n);
-}
 
 class ContentItem<Word extends boolean = boolean> {
     private readonly word: Word;
